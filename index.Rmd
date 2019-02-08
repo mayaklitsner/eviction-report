@@ -1,0 +1,21 @@
+---
+title: "Exercise Practice"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = F)
+source("analysis.R")
+```
+
+This report contains information about evictions in San Fransico. The dataset contained 'r num_evicitions' of eviction notices.
+
+## Zip Code Analysis
+A table of the top 10 zip codes with the highest number of evictions.
+
+''' {r}
+
+kable(by_zip, col.names = c("Zip Code", "Number of Evictions"))
+
+'''
